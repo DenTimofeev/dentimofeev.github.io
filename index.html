@@ -219,6 +219,44 @@
         </div>
     </div>
 
+    <script>
+        const boxes = document.querySelectorAll('.project')
 
+        const options = {
+            root: null,
+            threshold: 1.0
+        }
+
+        const callback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && entry.intersectionRatio === 1) {
+                    entry.target.classList.add('in-viewport')
+                } else {
+                    entry.target.classList.remove('in-viewport')
+                }
+            })
+        }
+
+        const element = document.querySelector('.my-element');
+        const mobileBreakpoint = "(max-width: 991.98px)";
+        const mediaQuery = window.matchMedia(mobileBreakpoint);
+        const observer = new IntersectionObserver(callback, options)
+
+        function handleDeviceChange(e) {
+            if (e.matches) {
+                boxes.forEach(box => {
+                    observer.observe(box)
+                })
+            } else {
+                boxes.forEach(box => {
+                    observer.unobserve(box)
+                })
+            }
+        }
+
+        mediaQuery.addEventListener('change', handleDeviceChange);
+
+        handleDeviceChange(mediaQuery);
+    </script>
 </body>
 </html>

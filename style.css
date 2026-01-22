@@ -180,10 +180,10 @@
 	transition: filter 200ms ease-out;
 }
 
+.projects-list .project.in-viewport .thumbnail,
 .projects-list .project:hover .thumbnail {
 	filter: grayscale(0%);
 }
-
 
 
 .projects-list .project .project-title {
