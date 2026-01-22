@@ -58,6 +58,12 @@
 	display: block;
 }
 
+@media (max-width: 991.98px) {
+	.about-me.is-mod-1 {
+		font-size: 16px;
+	}
+}
+
 .experience-with {
 	color: var(--Secondary-Text, #C5C5C5);
 	font-size: 20px;
