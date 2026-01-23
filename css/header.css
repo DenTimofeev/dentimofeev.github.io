@@ -40,3 +40,7 @@
 	
 	overflow: hidden;
 }
+
+.header .header-container .contact-icons a {
+	display: inline-flex;
+}

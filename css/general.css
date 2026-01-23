@@ -22,4 +22,7 @@ a {
 	/* Inside Auto layout */
 	align-self: stretch;
 	width: auto;
+
+	display: flex;
+	justify-content: center;
 }
