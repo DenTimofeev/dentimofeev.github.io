@@ -139,7 +139,7 @@
 	gap: 25px;
 	flex-wrap: wrap;
 	
-	max-width: 1055px;
+	max-width: 1395px;
 }
 
 @media (max-width: 991.98px) {
@@ -180,6 +180,8 @@
 	transition: filter 200ms ease-out;
 }
 
+.projects-list .project.in-viewport .icon,
+.projects-list .project:hover .icon,
 .projects-list .project.in-viewport .thumbnail,
 .projects-list .project:hover .thumbnail {
 	filter: grayscale(0%);
@@ -194,7 +196,7 @@
 	
 	/* Auto layout */
 	display: flex;
-	padding: 10px 50px 10px 20px;
+	padding: 10px 55px 10px 20px;
 	flex-direction: column;
 	align-items: flex-start;
 	
@@ -235,7 +237,15 @@
 	/* Inside Auto Layout (Absolute) x: max; y: max */
 	position: absolute;
 	right: 20px;
-	bottom: 56px;
+	bottom: 51px;
+
+	width: 25px;
+	height: 25px;
+
+	filter: grayscale(100%);
+	transition: filter 200ms ease-out;
+
+	border-radius: 4px;
 }
 
 
